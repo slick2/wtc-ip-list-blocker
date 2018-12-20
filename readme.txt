@@ -12,6 +12,12 @@ IP List Blocker blocks IP's which are malicious, bandwidth hogger and proxy.
 == Description ==
 IP List Blocker blocks IP's which are malicious, bandwidth hogger and clients using known public proxies.  To keep safe from hacking attemtps and to save bandwidth.  Some of the list came from https://github.com/firehol/blocklist-ipsets
 
+
+= 1.0.2 =
+
+* Release Date - 19 December 2018*
+* Update the API link
+
 = 1.0.1 =
 
 *Release Date - 15 December 2018*

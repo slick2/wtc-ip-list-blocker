@@ -13,7 +13,7 @@ add_action( 'init', 'limit_access' );
 
 function limit_access(){
      $ip = $_SERVER['REMOTE_ADDR'];
-     $response = wp_remote_get( 'http://iplists.webtuners.pro/api/ip/check/?ip='.$ip);
+     $response = wp_remote_get( 'https://check.youmake.net/api/ip/check/?ip='.$ip);
 
      if(!empty($response['body'])){
         $result = json_decode($response['body'], true);
