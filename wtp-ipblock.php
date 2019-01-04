@@ -3,7 +3,7 @@
 Plugin Name:	WTP IP List Blocker
 Plugin URI:		http://plugins.webtuners.pro
 Description:	Block access to IP's based on list
-Version:		1.0.3
+Version:		1.0.4
 Author:			Carey Dayrit
 Author URI:		http://www.slick2.me
 */
@@ -15,7 +15,7 @@ function limit_access(){
     $options = get_option('wtp_ipblock_options');
     
     $ip = $_SERVER['REMOTE_ADDR'];
-    $response = wp_remote_get( 'https://check.youmake.net/api/ip/check/?ip='.$ip,  array( 'timeout' => 30, 'headers' => array( 'X-API-KEY' => $options['api_key'])) );
+    $response = wp_remote_get( 'https://check.youmake.net/api/ip/check/?ip='.$ip.'&key='.$options['api_key'],  array( 'timeout' => 30)) );
 
     if(!empty($response['body'])){
         $result = json_decode($response['body'], true);
